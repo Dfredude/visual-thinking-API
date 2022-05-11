@@ -9,4 +9,10 @@ module.exports = class StudentController{
     static getCertifiedStudents(){
         return StudentService.getCertifiedStudents(Reader.readJSONFile("visual_partners.json"))
     }
+
+    static getGoodStudents(){
+        const students = Reader.readJSONFile("visual_partners.json")
+        return StudentService.getGoodStudents(students)
+    }
+
 }

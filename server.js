@@ -17,6 +17,10 @@ app.get("/api/v1/students/certified", (req, res)=>{
     res.send(StudentController.getCertifiedStudents())
 })
 
+app.get("/api/v1/students/good", (req, res)=>{
+    res.send(StudentController.getGoodStudents())
+})
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 })

@@ -7,4 +7,8 @@ module.exports = class StudentService{
     static getCertifiedStudents(students){
         return students.filter(student => student.haveCertification)
     }
+
+    static getGoodStudents(students){
+        return students.filter(student => student.credits>500)
+    }
 }
